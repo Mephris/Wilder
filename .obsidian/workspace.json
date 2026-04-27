@@ -84,7 +84,8 @@
               "title": "Notebook Navigator"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -191,7 +192,7 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "3fc9fa93e58e6be3",
+  "active": "bfc6ef651f08e4bd",
   "lastOpenFiles": [
     "Untitled 1.md",
     "Untitled.md",
