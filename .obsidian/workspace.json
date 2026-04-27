@@ -13,15 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled.md",
+                "file": "Short GDD/01 - Quick Reference.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "01 - Quick Reference"
+            }
+          },
+          {
+            "id": "41abc1019a2e60b4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Short GDD/02 - Core Design Vision.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "02 - Core Design Vision"
+            }
+          },
+          {
+            "id": "a2923b0ce9eb9381",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Short GDD/03 - Production.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "03 - Production"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -84,8 +113,7 @@
               "title": "Notebook Navigator"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -189,13 +217,18 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
-      "notebook-navigator:Notebook Navigator": false
+      "notebook-navigator:Notebook Navigator": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "bfc6ef651f08e4bd",
+  "active": "a2923b0ce9eb9381",
   "lastOpenFiles": [
+    "Short GDD/01 - Quick Reference.md",
+    "Short GDD/02 - Core Design Vision.md",
+    "Short GDD/03 - Production.md",
+    "Drawing 2026-04-27 23.40.48.excalidraw.md",
+    "Short GDD",
     "Untitled 1.md",
-    "Untitled.md",
     "99 - Miscancelous/Placeholder - Anu.png",
     "00 - Cosmology (Ages, Foundation)/02 - Notes/Age of Creation.md",
     "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/2 - Age of Knowledge - Conflict and Empathy.md",
@@ -225,12 +258,9 @@
     "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/4 - Age of Fate & Hope.md",
     "The Valleya.md",
     "20 - The Atlas/Covenant of Vocar/Vocare Kingdom.canvas",
-    "30 - The Census/Ancestries (Species & Races)/Star-Born/Devils(placeholder).md",
-    "40 - The Spirit World/40 - The Spirit World.md",
     "99 - Miscancelous/99 - Assets/Valli-A.png",
     "99 - Miscancelous/99 - Assets/Pasted image 20260329130632.png",
     "99 - Miscancelous/99 - Assets/Pasted image 20260329131145.png",
-    "30 - The Census/30 - The Census.md",
     "20 - The Atlas/Covenant of Vocar",
     "30 - The Census/Ancestries (Species & Races)/Beastkin/Nagual",
     "30 - The Census/Ancestries (Species & Races)/Beastkin/Nagual/Dragons/Drake",
@@ -244,7 +274,6 @@
     "Wyrm.png",
     "99 - Miscancelous/99 - Assets/The Saint Carnelian.png",
     "20 - The Atlas/Carnelian Commonwealth",
-    "30 - The Census/Ancestries (Species & Races)/Primordial Ink/Dragons/Descendants/Named",
     "00 - Cosmology & Ages/Timeline/Untitled.canvas",
     "Untitled.canvas",
     "Fable World/Entities/Untitled.canvas"
