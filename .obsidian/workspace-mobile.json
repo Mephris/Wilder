@@ -1,0 +1,229 @@
+{
+  "main": {
+    "id": "3b141b3d637c7e6c",
+    "type": "split",
+    "children": [
+      {
+        "id": "8ae74b95a9c50029",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bf3131516ae02eca",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/Age of Creation.canvas",
+                "viewState": {
+                  "x": 428.04440411914334,
+                  "y": 1933.0294507903857,
+                  "zoom": -0.7784729234696599
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Age of Creation"
+            }
+          },
+          {
+            "id": "e0aa86541f520f26",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/Age of Creation.canvas",
+                "viewState": {
+                  "x": 118.68497739835283,
+                  "y": 1472.9250058198033,
+                  "zoom": -2.7548213209792594
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Age of Creation"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "39ecae1721df0728",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "b19472b14fe9e8c2",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical",
+            "autoReveal": false
+          },
+          "icon": "lucide-folder-closed",
+          "title": "Files"
+        }
+      },
+      {
+        "id": "084d03bac3c4ecbd",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "Black b",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "Search"
+        }
+      },
+      {
+        "id": "25e52d28f3953d7b",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-tags",
+          "title": "Tags"
+        }
+      },
+      {
+        "id": "50ad0eb72ee1d8e7",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {},
+          "icon": "lucide-bookmark",
+          "title": "Bookmarks"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "1c62561b600d0086",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "730e9fc9b46dc18d",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "10 - The Supernal/12 - Aspects/12 - Aspects.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-coming-in",
+          "title": "Backlinks"
+        }
+      },
+      {
+        "id": "1607d31ab5744fa2",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "Athra/World Information/Carnelian/Carnelian Phenix.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "Outgoing links"
+        }
+      },
+      {
+        "id": "baf3e5f42f67be22",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Athra/World Information/Carnelian/Carnelian Phenix.md",
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-list",
+          "title": "Outline"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "bf3131516ae02eca",
+  "lastOpenFiles": [
+    "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/Age of Miracles.canvas",
+    "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/Age of Creation.canvas",
+    "00 - Cosmology (Ages, Foundation)/02 - Notes/Notes for Age of Creation.md",
+    "00 - Cosmology (Ages, Foundation)/02 - Notes/Age of Creation.md",
+    "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/4 - Age of Fate & Hope.md",
+    "00 - Cosmology (Ages, Foundation)/03 - Cosmology Graph.canvas",
+    "00 - Cosmology (Ages, Foundation)/00 - Cosmology (Ages, Foundation).md",
+    "10 - The Supernal/12 - Aspects/12 - Aspects.md",
+    "20 - The Atlas/Lune Magocracy.md",
+    "10 - The Supernal/10 - The Supernal.md",
+    "40 - The Spirit World/40 - The Spirit World.md",
+    "30 - The Census/Ancestries (Species & Races)/Beastkin/Nahual (placeholder).md",
+    "30 - The Census/Ancestries (Species & Races)/Beastkin/Beastkin.md",
+    "30 - The Census/Ancestries (Species & Races)/Ancestries (Species & Races).md",
+    "30 - The Census/Ancestries (Species & Races)/Primordial Ink/Dragons/Dragons.md",
+    "30 - The Census/Ancestries (Species & Races)/Primordial Ink/Dragons/Descendants/Drakes.md",
+    "30 - The Census/Ancestries (Species & Races)/Primordial Ink/Dragons/Descendants/Wyvern.md",
+    "images-3.jpeg",
+    "leviathan_8.jpg",
+    "Fable World/Timeline/Age of Miracles - Life & Ambition.md",
+    "Fable World/Timeline/Age of Fate & Hope.md",
+    "Fable World/Timeline/Age of Knowledge - Conflict and Empathy.md",
+    "Fable World/Entities/Aspects/Aspects of Mortal/Aspect of Defiantce - Edal.md",
+    "Fable World/Timeline/Age of Creation - Wildern & Beauty.md",
+    "Fable World/Timeline/Untitled.md",
+    "Fable World/Entities/Aspects/Aspects of Mortal/Aspects of Mortal.md",
+    "Fable World/Entities/Aspects/Aspects of Grael/Aspect of Wildern.md",
+    "Fable World/Timeline/Beginning.md",
+    "Fable World/Entities/Primevals/Tuatha.md",
+    "Fable World/Entities/Primevals/Grael.md",
+    "Fable World",
+    "Birb",
+    "Kuchnia/Alkohole",
+    "Kuchnia",
+    "Pracownia",
+    "Warframe/Warframe Pics/Tuvul.png",
+    "Warframe/Warframe Pics/Screenshot 2025-12-10 185231.png",
+    "Warframe/Warframe Pics/Screenshot 2025-12-10 184904.png",
+    "Warframe/Warframe Pics/Screenshot 2025-12-10 184025.png",
+    "Warframe/Warframe Pics/Pasted image 20251210200727.png",
+    "Warframe/Warframe Pics/Pasted image 20251210200459.png",
+    "Warframe/Warframe Pics/Pasted image 20251210200436.png",
+    "Warframe/Warframe Pics/Pasted image 20251210200406.png",
+    "Warframe/Warframe Pics",
+    "Warframe/Quests",
+    "Warframe/Locations",
+    "Warframe/Leverian",
+    "Warframe/Executors"
+  ]
+}
