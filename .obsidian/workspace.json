@@ -36,21 +36,55 @@
             }
           },
           {
+            "id": "fa3da51e62e840cd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Full GDD - Wilder.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Full GDD - Wilder"
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "9077eb740f37b25c",
+        "type": "tabs",
+        "children": [
+          {
             "id": "a2923b0ce9eb9381",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Short GDD/03 - Production.md",
+                "file": "Short GDD/Alexs-Core-GDD-Template.docx.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03 - Production"
+              "title": "Alexs-Core-GDD-Template.docx"
+            }
+          },
+          {
+            "id": "7dd896f21a2aabca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01 - Project Info.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "01 - Project Info"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -117,7 +151,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 292.5
   },
   "right": {
     "id": "ce9a34acc8273217",
@@ -221,12 +255,18 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "177ac833f0870eb3",
+  "active": "fa3da51e62e840cd",
   "lastOpenFiles": [
-    "Untitled.canvas",
+    "Short GDD/Alexs-Core-GDD-Template.docx.md",
     "Short GDD/03 - Production.md",
     "Short GDD/01 - Quick Reference.md",
     "Short GDD/02 - Core Design Vision.md",
+    "01 - Project Info.md",
+    "2. Game Overview & Vision.md",
+    "Full GDD - Wilder.md",
+    "00 - Wilder.md",
+    "Core GDD",
+    "Untitled.canvas",
     "Drawing 2026-04-27 23.40.48.excalidraw.md",
     "Short GDD",
     "Untitled 1.md",
@@ -251,12 +291,8 @@
     "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/3 - Age of Miracles - Life & Ambition.md",
     "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/Age of Miracles.canvas",
     "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/Age_of_Knowledge.canvas",
-    "30 - The Census/Ancestries (Species & Races)/Star-Born/Fae Cinn.md",
-    "10 - The Supernal/12 - Aspects/Aspect of Tuatha/Beauty.md",
-    "10 - The Supernal/12 - Aspects/Aspect of Grael/Wildern.md",
     "99 - Miscancelous/Placeholder - Danu.png",
     "Pasted image 20260406181127.png",
-    "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/4 - Age of Fate & Hope.md",
     "20 - The Atlas/Covenant of Vocar/Vocare Kingdom.canvas",
     "99 - Miscancelous/99 - Assets/Valli-A.png",
     "99 - Miscancelous/99 - Assets/Pasted image 20260329130632.png",
@@ -273,7 +309,6 @@
     "30 - The Census/Lineage",
     "Wyrm.png",
     "99 - Miscancelous/99 - Assets/The Saint Carnelian.png",
-    "20 - The Atlas/Carnelian Commonwealth",
     "00 - Cosmology & Ages/Timeline/Untitled.canvas",
     "Fable World/Entities/Untitled.canvas"
   ]
