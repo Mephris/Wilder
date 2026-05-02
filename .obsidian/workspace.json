@@ -6,6 +6,7 @@
       {
         "id": "c72a5515d0b0f7ab",
         "type": "tabs",
+        "dimension": 61.8848167539267,
         "children": [
           {
             "id": "3fc9fa93e58e6be3",
@@ -41,12 +42,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Full GDD - Wilder.md",
+                "file": "GDD - Wilder.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Full GDD - Wilder"
+              "title": "GDD - Wilder"
             }
           }
         ],
@@ -55,6 +56,7 @@
       {
         "id": "9077eb740f37b25c",
         "type": "tabs",
+        "dimension": 38.1151832460733,
         "children": [
           {
             "id": "a2923b0ce9eb9381",
@@ -76,12 +78,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 - Project Info.md",
+                "file": "Short GDD/02 - Core Design Vision.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01 - Project Info"
+              "title": "02 - Core Design Vision"
             }
           }
         ]
@@ -147,7 +149,8 @@
               "title": "Notebook Navigator"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -257,13 +260,19 @@
   },
   "active": "fa3da51e62e840cd",
   "lastOpenFiles": [
-    "Short GDD/Alexs-Core-GDD-Template.docx.md",
-    "Short GDD/03 - Production.md",
-    "Short GDD/01 - Quick Reference.md",
     "Short GDD/02 - Core Design Vision.md",
+    "GDD - Wilder.md",
+    "Creation.md",
+    "Short GDD/Alexs-Core-GDD-Template.docx.md",
+    "TDD.md",
     "01 - Project Info.md",
     "2. Game Overview & Vision.md",
-    "Full GDD - Wilder.md",
+    "Excalidraw/UI.excalidraw.md",
+    "Pasted Image 20260502155849_278.png",
+    "Assets",
+    "Excalidraw",
+    "Short GDD/03 - Production.md",
+    "Short GDD/01 - Quick Reference.md",
     "00 - Wilder.md",
     "Core GDD",
     "Untitled.canvas",
@@ -286,9 +295,6 @@
     "00 - Cosmology (Ages, Foundation)/03 - Cosmology Graph.canvas",
     "30 - The Census/Ancestries (Species & Races)/Beastkin/Nagual/Dragons/Dragons.md",
     "30 - The Census/Ancestries (Species & Races)/Beastkin/Nagual/Nagual.md",
-    "30 - The Census/Ancestries (Species & Races)/Beastkin/Nagual/The Nahualli.md",
-    "30 - The Census/Ancestries (Species & Races)/Beastkin/Nagual/The Wyvern Clan.md",
-    "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/3 - Age of Miracles - Life & Ambition.md",
     "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/Age of Miracles.canvas",
     "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/Age_of_Knowledge.canvas",
     "99 - Miscancelous/Placeholder - Danu.png",
@@ -305,10 +311,7 @@
     "30 - The Census/Ancestries (Species & Races)/Beastkin/Tonal",
     "99 - Miscancelous/99 - Assets/Jagged Loom stained with Ichor.png",
     "99 - Miscancelous/99 - Assets/Wyrm.png",
-    "99 - Miscancelous",
-    "30 - The Census/Lineage",
     "Wyrm.png",
-    "99 - Miscancelous/99 - Assets/The Saint Carnelian.png",
     "00 - Cosmology & Ages/Timeline/Untitled.canvas",
     "Fable World/Entities/Untitled.canvas"
   ]
