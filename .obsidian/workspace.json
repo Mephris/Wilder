@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "The Created.md",
+                "file": "AI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The Created"
+              "title": "AI"
             }
           },
           {
@@ -208,9 +208,10 @@
   },
   "active": "a2923b0ce9eb9381",
   "lastOpenFiles": [
+    "The Created.md",
+    "AI.md",
     "GDD - Wilder.md",
     "TDD.md",
-    "The Created.md",
     "Short GDD/Alexs-Core-GDD-Template.docx.md",
     "Short GDD/02 - Core Design Vision.md",
     "01 - Project Info.md",
@@ -242,7 +243,6 @@
     "00 - Cosmology (Ages, Foundation)/00 - Cosmology (Ages, Foundation).md",
     "00 - Cosmology (Ages, Foundation)/03 - Cosmology Graph.canvas",
     "30 - The Census/Ancestries (Species & Races)/Beastkin/Nagual/Dragons/Dragons.md",
-    "30 - The Census/Ancestries (Species & Races)/Beastkin/Nagual/Nagual.md",
     "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/Age of Miracles.canvas",
     "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/Age_of_Knowledge.canvas",
     "99 - Miscancelous/Placeholder - Danu.png",
