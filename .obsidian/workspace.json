@@ -4,59 +4,8 @@
     "type": "split",
     "children": [
       {
-        "id": "c72a5515d0b0f7ab",
-        "type": "tabs",
-        "dimension": 61.8848167539267,
-        "children": [
-          {
-            "id": "3fc9fa93e58e6be3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Short GDD/01 - Quick Reference.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "01 - Quick Reference"
-            }
-          },
-          {
-            "id": "41abc1019a2e60b4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Short GDD/02 - Core Design Vision.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "02 - Core Design Vision"
-            }
-          },
-          {
-            "id": "fa3da51e62e840cd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "GDD - Wilder.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "GDD - Wilder"
-            }
-          }
-        ],
-        "currentTab": 2
-      },
-      {
         "id": "9077eb740f37b25c",
         "type": "tabs",
-        "dimension": 38.1151832460733,
         "children": [
           {
             "id": "a2923b0ce9eb9381",
@@ -64,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Short GDD/Alexs-Core-GDD-Template.docx.md",
+                "file": "The Created.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Alexs-Core-GDD-Template.docx"
+              "title": "The Created"
             }
           },
           {
@@ -149,8 +98,7 @@
               "title": "Notebook Navigator"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -258,13 +206,13 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "fa3da51e62e840cd",
+  "active": "a2923b0ce9eb9381",
   "lastOpenFiles": [
-    "Short GDD/02 - Core Design Vision.md",
     "GDD - Wilder.md",
-    "Creation.md",
-    "Short GDD/Alexs-Core-GDD-Template.docx.md",
     "TDD.md",
+    "The Created.md",
+    "Short GDD/Alexs-Core-GDD-Template.docx.md",
+    "Short GDD/02 - Core Design Vision.md",
     "01 - Project Info.md",
     "2. Game Overview & Vision.md",
     "Excalidraw/UI.excalidraw.md",

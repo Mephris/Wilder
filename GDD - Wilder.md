@@ -41,11 +41,11 @@ Players take on a role of an ancient forest guardian. The core experience is abo
 ###### Player Journey Snapshot
    * **The First 10 Minutes:** 
     You appear in the middle of an unknown place, around you are different plants and beasts. You see them act in different ways, some hunt each other, others are large herbivores, some others small and fast. So you travel that land, investigating, looking at what is going on around you. 
-	In doing so, you unlock traits of creatures and plants you seen, and then time comes, either a dying beast or fickle decision you make your [[Creation]], which kickstarts your change in the environment. 
+	In doing so, you unlock traits of creatures and plants you seen, and then time comes, either a dying beast or fickle decision you make your [[The Created]], which kickstarts your change in the environment. 
 	A single beast becomes two, then three, and more, you see them integrate or fight the land. Before you emerges a choice, integrate into the current environment, or dominate it with horrors. 
    * **Late-Game Session:** 
    Problems emerging from your own changes to the environment.
-	   Your [[Creation]]s spread, you can see them interacting more and more, some emerge dominant, predators are too strong and they kill more and more of others? make stronger herbivores, you didn't? maybe a cannibal traits appeared for your predator species. The herbivores ate all plants? you have to make the plants spread and grow more aggressively. 
+	   Your [[The Created]]s spread, you can see them interacting more and more, some emerge dominant, predators are too strong and they kill more and more of others? make stronger herbivores, you didn't? maybe a cannibal traits appeared for your predator species. The herbivores ate all plants? you have to make the plants spread and grow more aggressively. 
 
 ###### Unique Selling Points (USP)
    * **Emergent Gameplay & Story:** Interactions between mutated species create stories without scripted dialogue.
@@ -85,12 +85,12 @@ flowchart TD
 
 ###### **Player Progression**:
 - **Visual spread** Whenever you open the overview of the explored map, you can see land where your creations live and spread. The more of ecosystem was made by you the deeper the tint. 
-- **Playground Knowledge** As you make changes to your [[Creation]]s, you may get additional traits either from exploration or due to some creatures evolving other traits for themselves to survive. 
+- **Playground Knowledge** As you make changes to your [[The Created]]s, you may get additional traits either from exploration or due to some creatures evolving other traits for themselves to survive. 
 > [!warning] Evolution & Traits
 > It should be hard to trigger an evolution in an animal in order to add actual weight to it. The traits from natural evolution should be something not seen by player. (adding traits that must be attained from evolution, cannot be gained in baseline world).
 
 ###### **Controls & Input**
-Slower paced gameplay, where mainly you will spend your time in looking through traits and in [[Creation]] modificator/creator. Keyboard for character movement and maybe key shortcuts, mouse for navigating UI. 
+Slower paced gameplay, where mainly you will spend your time in looking through traits and in [[The Created]] modificator/creator. Keyboard for character movement and maybe key shortcuts, mouse for navigating UI. 
 - **Direct Control** with **Camera-Relative Movement**. Inputs are mapped to screen space (e.g., W always moves the character toward the top of the viewport), ensuring intuitive navigation regardless of character orientation."
 - **Traits Screen** [TBD] minimalistic UI navigable with a mouse, clicking animals shows traits, traits you know show whenever you hover/click bottom of screen. 
 
@@ -100,8 +100,8 @@ Different biomes will hold different traits, ground fertility (for plants) and r
 [Should we make player character mortal? well... killable by animals and enviroment]
 
 ###### Feedback system
-1. **Visual**: Observing [[Creation]] spreading, performing its behaviors. Seeing the ecosystem color on map changing to yours/integrated with yours. 
-2. **Logs**: You can look into logs of your [[Creation]]s, what they did or are doing, where they are on map, focusing map onto them [Maybe controlling them as if they were playable character?]
+1. **Visual**: Observing [[The Created]] spreading, performing its behaviors. Seeing the ecosystem color on map changing to yours/integrated with yours. 
+2. **Logs**: You can look into logs of your [[The Created]]s, what they did or are doing, where they are on map, focusing map onto them [Maybe controlling them as if they were playable character?]
 3. **Audio**: Each time new trait evolves in your creation you get a notification sound, sounds for movement, changing sounds of the environment depending on what is in it (Different entities will make different sounds)
 
 ### 4. Game Mechanics & Systems
@@ -115,7 +115,7 @@ The mechanics prevalent in the core gameplay loop.
 ###### Observation & Scanning:
 The primary method for gathering data. By interacting with or "focusing" on a life form, the player uncovers its genetic traits, biological needs, and role in the current ecosystem. This feeds the genetic library used for later creations.
 
-###### [[Creation]]
+###### [[The Created]]
 The act of introducing traits to an already living, weakened beast, or creating a new life from scratch. 
 
 You chose traits to become a part of your creature and once done you hold a creature until you release them. 
@@ -139,11 +139,11 @@ A passive mechanic where the world "speaks" to the player. Success is signaled b
 ##### **Side Mechanics**[TBD]
 The optional or supplementary mechanics like fishing, mini-games, base-building, etc. They are not part of the core loop, but they provide variety. 
 
-###### Taking on [[Creation]] form
+###### Taking on [[The Created]] form
 You take on a form of your creation and are able to roam the map as it, doing the same actions as they would be. Possibly directing their spread/migration. 
 
-###### [[Creation]] form actions
-Whenever hunting or living as a [[Creation]] you can get unknown traits from beasts and plants you eat. 
+###### [[The Created]] form actions
+Whenever hunting or living as a [[The Created]] you can get unknown traits from beasts and plants you eat. 
 
 ***
 
