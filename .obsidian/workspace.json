@@ -35,8 +35,7 @@
               "title": "TODO"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +98,8 @@
               "title": "Notebook Navigator"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -207,24 +207,24 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "4d2d6d423ba9297e",
+  "active": "7dd896f21a2aabca",
   "lastOpenFiles": [
+    "TODO.md",
+    "Assets/Assets.md",
+    "TDD/TDD_Animals.md",
+    "TDD/TDD.md",
+    "Documentation/AI.md",
+    "Documentation/The Created.md",
+    "Documentation/GDD - Wilder.md",
     "Documentation/UI.md",
     "Documentation",
-    "TODO.md",
-    "Documentation/The Created.md",
-    "TDD/TDD.md",
     "TDD.md",
-    "Documentation/GDD - Wilder.md",
-    "Documentation/AI.md",
     "Temp.md",
     "Excalidraw/UI.excalidraw.md",
     "Excalidraw/Drawing 2026-05-05 00.39.12.excalidraw.md",
-    "TDD/TDD_Animals.md",
     "conflict-files-obsidian-git.md",
     "ProjectFiles",
     "New folder",
-    "Assets/Assets.md",
     "TDD",
     "2. Game Overview & Vision.md",
     "01 - Project Info.md",
