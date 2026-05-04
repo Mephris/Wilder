@@ -68,8 +68,42 @@ class EntitiesBehaviourHandler{
 class Entity{
 	+Gene[] genes
 	+EntityData hungerEtc
-	+EntityGoal nextGoal
+	+EntityGoal currentGoal
 	+EntityBehaviour entityBehaviour?
+}
+
+class Gene{
+	+GeneType type : Enum
+	+Object[] traits
+	
+	+getFloat(id) : float
+	+getBool(id) : bool
+	+getInt(id) : int
+}
+
+class EntityLocation {
+	+sbyte elevation
+	+sbyte humidity
+	+sbyte roughness
+	+sbyte temperature
+	
+	+compare(EntityLocation) : bool
+}
+
+class EntityGoal {
+	+GoalType type : Enum
+	+Object[] traits
+	
+	+getFloat(id) : float
+	+getBool(id) : bool
+	+getInt(id) : int
+}
+
+class EntityParameter {
+	+Entity parent
+	+float baseParameter
+	
+	+getCurrentParameter():float
 }
 
 EntityManager --* Entity : stores
@@ -79,19 +113,35 @@ EntityManager --> EntitiesBehaviourHandler : delegates
 EntitiesTickHandler --> Entity : processes
 EntitiesGoalHandler --> Entity : processes
 EntitiesBehaviourHandler --> Entity : processes
-
-
-
-Entity --* Gene
+Entity --* Gene : stores
+Entity --* EntityLocation : connects
+Entity --* EntityGoal : connects
+Entity --* EntityParameter : connects
+EntityParameter -->  Entity : uses for calculations
 ```
 
-### Perception & Sensory systems
+### (ForLater)Perception & Sensory systems
 To keep it simpler then messing with LOS or other BS, we will be using proximity-based detection. 
 
-#### Query logic
+##### Query logic
 Every **PerceptionInterval**, the animal asks the **SpacialSystem** 
 	*"What are the nearest entities within **SmellRadius**"*
 - **Logic:** Simple distance check between **Entity.Position** and **Target.Position**
 
-#### Data Storage
-Results are stored within the list inside the **Entity**
+##### Data Storage
+Results are stored within the list inside the **Entity** as **PerceptionData**
+
+```mermaid
+classDiagram
+
+class PerceptionData{
+	+visibleFood: Entity[];
+	+visiblePredators: Entity[];
+	+nearestWater: Vector3 | null;
+}
+```
+##### Utility Interaction
+[[AI#Utility Layer (The "Brain")|Utility]] uses this data to calculate weights 
+	*Examples:*
+	- If *visiblePredator* is not empty, set *FearWeight* to 1.0
+	- If *visibleFood* has 3 items, set *FoodAvailabilityScore* to 1.0

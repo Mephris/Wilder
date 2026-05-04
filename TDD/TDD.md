@@ -14,7 +14,6 @@
 	- Splicing genes
 	- User interface
 
-
 ![[TDD_Animals#General Loop|clean]]
 
 ![[TDD_Animals#System Architecture|clean]]
