@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TDD/TDD.md",
+                "file": "TDD/TDD_Animals.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TDD"
+              "title": "TDD_Animals"
             }
           }
         ]
@@ -195,9 +195,11 @@
   },
   "active": "7dd896f21a2aabca",
   "lastOpenFiles": [
-    "Assets/Assets.md",
+    "ProjectFiles",
+    "New folder",
     "TDD/TDD.md",
     "TDD/TDD_Animals.md",
+    "Assets/Assets.md",
     "TDD",
     "Temp.md",
     "GDD - Wilder.md",
@@ -229,7 +231,6 @@
     "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/0 - Beginning.md",
     "10 - The Supernal/11 - Primevals/Tuatha.md",
     "10 - The Supernal/10 - The Supernal.md",
-    "00 - Cosmology (Ages, Foundation)/02 - Notes/Research - Fable.md",
     "00 - Cosmology (Ages, Foundation)/03 - Cosmology Graph.canvas",
     "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/Age of Miracles.canvas",
     "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/Age_of_Knowledge.canvas",
@@ -243,7 +244,6 @@
     "30 - The Census/Ancestries (Species & Races)/Beastkin/Nagual",
     "30 - The Census/Ancestries (Species & Races)/Beastkin/Nagual/Dragons/Drake",
     "30 - The Census/Ancestries (Species & Races)/Beastkin/Nagual/Dragons/Wyvern",
-    "30 - The Census/Ancestries (Species & Races)/Beastkin/Nagual/Dragons/Wyrm",
     "99 - Miscancelous/99 - Assets/Jagged Loom stained with Ichor.png",
     "99 - Miscancelous/99 - Assets/Wyrm.png",
     "Wyrm.png",

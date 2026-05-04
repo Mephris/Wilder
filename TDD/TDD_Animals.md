@@ -1,4 +1,4 @@
-#### General Loop
+### General Loop
 From [[TDD_Animals]]
 
 ```mermaid
@@ -38,3 +38,60 @@ flowchart TD
         end
 ```
 
+### System Architecture
+
+
+```mermaid
+classDiagram
+
+class EntityManager{
+	+Dict(id, entity) entities
+	+Event(data) updateDisplayedData
+	
+	+addNewEntity(entitydata, genesData)
+	+removeEntity(entityID)
+	+addGeneToEntity(entityID, geneID)
+}
+
+class EntitiesTickHandler{
+	+tickEntities(Entity[] entities) : result
+}
+
+class EntitiesGoalHandler{
+	+processEntityGoal(Entity entity) : result
+}
+
+class EntitiesBehaviourHandler{
+	+processEntityBehaviour(Entity entity) : result
+}
+
+class Entity{
+	+Gene[] genes
+	+EntityData hungerEtc
+	+EntityGoal nextGoal
+	+EntityBehaviour entityBehaviour?
+}
+
+EntityManager --* Entity : stores
+EntityManager --> EntitiesGoalHandler : delegates
+EntityManager --> EntitiesTickHandler : delegates
+EntityManager --> EntitiesBehaviourHandler : delegates
+EntitiesTickHandler --> Entity : processes
+EntitiesGoalHandler --> Entity : processes
+EntitiesBehaviourHandler --> Entity : processes
+
+
+
+Entity --* Gene
+```
+
+### Perception & Sensory systems
+To keep it simpler then messing with LOS or other BS, we will be using proximity-based detection. 
+
+#### Query logic
+Every **PerceptionInterval**, the animal asks the **SpacialSystem** 
+	*"What are the nearest entities within **SmellRadius**"*
+- **Logic:** Simple distance check between **Entity.Position** and **Target.Position**
+
+#### Data Storage
+Results are stored within the list inside the **Entity**
