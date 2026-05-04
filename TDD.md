@@ -139,15 +139,3 @@ class OutputManager{
 InputManager --> EntityManager
 EntityManager --> OutputManager
 ```
-
-
-
-### Terrain
-- Temperature
-	- -5:5
-- Elevation
-	- -1:1
-- Humidity
-	- -5:5 (-5 desert, antarctica 5 ocean, over/under ocean)
-- Roughness
-	- -5:5
