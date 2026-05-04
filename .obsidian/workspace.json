@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GDD - Wilder.md",
+                "file": "TDD/TDD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GDD - Wilder"
+              "title": "TDD"
             }
           }
         ]
@@ -84,7 +84,8 @@
               "title": "Notebook Navigator"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -194,6 +195,12 @@
   },
   "active": "7dd896f21a2aabca",
   "lastOpenFiles": [
+    "Assets/Assets.md",
+    "TDD/TDD.md",
+    "TDD/TDD_Animals.md",
+    "TDD",
+    "Temp.md",
+    "GDD - Wilder.md",
     "AI.md",
     "2. Game Overview & Vision.md",
     "01 - Project Info.md",
@@ -201,9 +208,7 @@
     "Short GDD/03 - Production.md",
     "Short GDD/02 - Core Design Vision.md",
     "Short GDD/01 - Quick Reference.md",
-    "GDD - Wilder.md",
     "The Created.md",
-    "TDD.md",
     "Excalidraw/UI.excalidraw.md",
     "Pasted Image 20260502155849_278.png",
     "Assets",
@@ -225,10 +230,7 @@
     "10 - The Supernal/11 - Primevals/Tuatha.md",
     "10 - The Supernal/10 - The Supernal.md",
     "00 - Cosmology (Ages, Foundation)/02 - Notes/Research - Fable.md",
-    "00 - Cosmology (Ages, Foundation)/02 - Notes/Cosmology.md",
-    "00 - Cosmology (Ages, Foundation)/00 - Cosmology (Ages, Foundation).md",
     "00 - Cosmology (Ages, Foundation)/03 - Cosmology Graph.canvas",
-    "30 - The Census/Ancestries (Species & Races)/Beastkin/Nagual/Dragons/Dragons.md",
     "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/Age of Miracles.canvas",
     "00 - Cosmology (Ages, Foundation)/01 - Timeline (Ages)/Age_of_Knowledge.canvas",
     "99 - Miscancelous/Placeholder - Danu.png",
@@ -242,7 +244,6 @@
     "30 - The Census/Ancestries (Species & Races)/Beastkin/Nagual/Dragons/Drake",
     "30 - The Census/Ancestries (Species & Races)/Beastkin/Nagual/Dragons/Wyvern",
     "30 - The Census/Ancestries (Species & Races)/Beastkin/Nagual/Dragons/Wyrm",
-    "30 - The Census/Ancestries (Species & Races)/Beastkin/Tonal",
     "99 - Miscancelous/99 - Assets/Jagged Loom stained with Ichor.png",
     "99 - Miscancelous/99 - Assets/Wyrm.png",
     "Wyrm.png",

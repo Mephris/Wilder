@@ -14,30 +14,8 @@
 	- Splicing genes
 	- User interface
 
-```mermaid
-flowchart TD
 
-	Input[Player Input]
-	Output[Visual Output]
-	BT[Behaviour Tree]
-	CE[Create Entity]
-	DE[Destroy Entity]
-	ME["Modify Entity (Modify genes)"]
-	Tick[Tick each entity]
-	EA[Entity Action]
-	
-    Input --> CE
-    Input --> DE
-    Input --> ME
-    CE --> Tick
-    DE --> Tick
-    ME --> Tick
-    Tick --> BT
-    BT --> EA
-    EA --> Output 
-```
-
-
+![[TDD_Animals#General Loop|clean]]
 
 
 ```mermaid
@@ -111,3 +89,4 @@ class OutputManager{
 InputManager --> EntityManager
 EntityManager --> OutputManager
 ```
+
