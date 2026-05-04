@@ -71,6 +71,33 @@ class Entity{
 	+EntityBehaviour entityBehaviour?
 }
 
+class Gene{
+	+GeneType type : Enum
+	+Object[] traits
+	
+	+getFloat(id) : float
+	+getBool(id) : bool
+	+getInt(id) : int
+}
+
+class EntityLocation {
+	+sbyte elevation
+	+sbyte humidity
+	+sbyte roughness
+	+sbyte temperature
+	
+	+compare(EntityLocation) : bool
+}
+
+class EntityAction {
+	+ActionType type : Enum
+	+Object[] traits
+	
+	+getFloat(id) : float
+	+getBool(id) : bool
+	+getInt(id) : int
+}
+
 EntityManager --* Entity : stores
 EntityManager --> EntitiesActionHandler : delegates
 EntityManager --> EntitiesTickHandler : delegates
@@ -78,10 +105,11 @@ EntityManager --> EntitiesBehaviourHandler : delegates
 EntitiesTickHandler --> Entity : processes
 EntitiesActionHandler --> Entity : processes
 EntitiesBehaviourHandler --> Entity : processes
+Entity --* Gene : stores
+Entity --* EntityLocation : connects
+Entity --* EntityAction : connects
 
 
-
-Entity --* Gene
 ```
 
 
@@ -111,3 +139,15 @@ class OutputManager{
 InputManager --> EntityManager
 EntityManager --> OutputManager
 ```
+
+
+
+### Terrain
+- Temperature
+	- -5:5
+- Elevation
+	- -1:1
+- Humidity
+	- -5:5 (-5 desert, antarctica 5 ocean, over/under ocean)
+- Roughness
+	- -5:5
