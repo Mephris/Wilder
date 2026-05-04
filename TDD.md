@@ -98,6 +98,13 @@ class EntityAction {
 	+getInt(id) : int
 }
 
+class EntityParameter {
+	+Entity parent
+	+float baseParameter
+	
+	+getCurrentParameter():float
+}
+
 EntityManager --* Entity : stores
 EntityManager --> EntitiesActionHandler : delegates
 EntityManager --> EntitiesTickHandler : delegates
@@ -108,6 +115,8 @@ EntitiesBehaviourHandler --> Entity : processes
 Entity --* Gene : stores
 Entity --* EntityLocation : connects
 Entity --* EntityAction : connects
+Entity --* EntityParameter : connects
+EntityParameter -->  Entity : uses for calculations
 
 
 ```

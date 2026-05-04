@@ -1,0 +1,3 @@
+- Format saving the events
+- Genes 
+- Entities Parameters (hunger, speed, thirst, etc)
