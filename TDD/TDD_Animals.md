@@ -106,7 +106,6 @@ class SpeciesTemplate {
     +string speciesName
     +float baseActionSpeed
     +float baseBodySize
-    +float metabolismRate
     +int maxAge
     +DietType diet
 }
