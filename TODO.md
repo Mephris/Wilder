@@ -1,4 +1,3 @@
 - Format saving the events
 - Genes 
-- Entities Parameters (hunger, speed, thirst, etc)
 - Remember to, for now, save the already done events in the **Entity**. (Probably by ID)
