@@ -134,7 +134,7 @@ SpeciesLibrary --* SpeciesTemplate : contains
 Entity o-- SpeciesTemplate : references
 ```
 
-#### Architectural Legend
+### Architectural Legend
 #### 1. The Data Layer (The "What")
 * **Entity:** A unique ID that represents a creature. It is a "Passive Container"—it holds data but does not contain logic.
 * **EntityData/State (The "Pulse"):** The current dynamic values of the creature (Hunger, Thirst, Health, Position). These change every frame.
@@ -153,8 +153,6 @@ Entity o-- SpeciesTemplate : references
 * **InputManager:** Converts player clicks/keys into commands for the `EntityManager` (e.g., "Spawn Entity" or "Modify Genes").
 * **OutputManager:** Listens to the `EntityState` and tells the Game Engine what to draw on the screen (Animations, UI Bars, Particles).
 
-
-
 ### Parameters
 #### Species Library (Static Data)
 These values never change during the game. All rabbits share these.
@@ -165,7 +163,7 @@ These values never change during the game. All rabbits share these.
 * **BaseBodySize:** How big this species typically gets.
 * **DietType:** (Enum: Herbivore, Carnivore, etc.)
 
-##### Entity Instance (Personal Data)
+#### Entity Instance (Personal Data)
 - **EntityID**
 - **Genes:** Species library genes, with additional personal genes. 
 - **Current Age (0.0 - 1.0)**
@@ -242,8 +240,6 @@ class EntityLocation {
     Entity --* EntityParameters : stores
     Entity --* EntityLocation : at
 ```
-
-
 
 ### (ForLater)Perception & Sensory systems
 To keep it simpler then messing with LOS or other BS, we will be using proximity-based detection. 
