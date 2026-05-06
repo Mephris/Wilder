@@ -129,7 +129,7 @@ Entity --* EntityGoal : connects
 Entity --* EntityParameter : connects
 EntityParameter -->  Entity : uses for calculations
 SpeciesLibrary --* SpeciesTemplate : contains
-Entity o-- SpeciesTemplate : references
+EntityParameter o-- SpeciesTemplate : references
 ```
 
 #### Architectural Legend
@@ -165,7 +165,7 @@ These values never change during the game. All rabbits share these.
 
 ##### Entity Instance (Personal Data)
 - **EntityID**
-- **Genes:** Genes held by this specific Entity only.   
+- **Genes:** Species library genes, with additional personal genes. 
 - **Current Age (0.0 - 1.0)**
     - `0 - newborn`, `1 - death of old age`, `0.2 - adulthood`, `0.5 - end of reproductive age`
 - **ActionSpeed (0.0 - 1.0)**
