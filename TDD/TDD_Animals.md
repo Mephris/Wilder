@@ -128,8 +128,8 @@ EntitiesBehaviourHandler --> Entity : processes
 Entity --* Gene : stores
 Entity --* EntityLocation : connects
 Entity --* EntityGoal : connects
-Entity --* EntityParameter : connects
-EntityParameter -->  Entity : uses for calculations
+Entity --* EntityParameters : connects
+EntityParameters -->  Entity : uses for calculations
 SpeciesLibrary --* SpeciesTemplate : contains
 Entity o-- SpeciesTemplate : references
 ```
