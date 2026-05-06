@@ -94,11 +94,13 @@ class EntityGoal {
 	+getInt(id) : int
 }
 
-class EntityParameter {
-	+Entity parent
-	+float baseParameter
-	
-	+getCurrentParameter():float
+class EntityParameters {
+    +Entity parent
+    +float hunger
+    +float fatigue
+    +float fear
+     
+    +getCurrentParameter():float
 }
 
 
@@ -129,7 +131,7 @@ Entity --* EntityGoal : connects
 Entity --* EntityParameter : connects
 EntityParameter -->  Entity : uses for calculations
 SpeciesLibrary --* SpeciesTemplate : contains
-EntityParameter o-- SpeciesTemplate : references
+Entity o-- SpeciesTemplate : references
 ```
 
 #### Architectural Legend
@@ -216,20 +218,28 @@ classDiagram
         +StateParameters state
     }
 
-    class StateParameters {
-        +float hunger
-        +float fatigue
-        +float fear
+
+class EntityParameters {
+    +Entity parent
+    +float hunger
+    +float fatigue
+    +float fear
+      
+    +getCurrentParameter():float
     }
 
-    class EntityLocation {
-        +float x, y, z
-        +float temperature
-    }
+class EntityLocation {
+	+sbyte elevation
+	+sbyte humidity
+	+sbyte roughness
+	+sbyte temperature
+	
+	+compare(EntityLocation) : bool
+}
 
     SpeciesLibrary --* SpeciesTemplate : contains
     Entity o-- SpeciesTemplate : references
-    Entity --* StateParameters : stores
+    Entity --* EntityParameters : stores
     Entity --* EntityLocation : at
 ```
 
