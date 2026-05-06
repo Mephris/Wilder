@@ -39,8 +39,6 @@ flowchart TD
 ```
 
 ### System Architecture
-1. **Entity:** A unique ID that
-
 
 ```mermaid
 classDiagram
@@ -68,18 +66,14 @@ class EntitiesBehaviourHandler{
 
 class Entity{
 	+Gene[] genes
-	+EntityData hungerEtc
+	+EntityState state
 	+EntityGoal currentGoal
 	+EntityBehaviour entityBehaviour?
 }
 
 class Gene{
 	+GeneType type : Enum
-	+Object[] traits
-	
-	+getFloat(id) : float
-	+getBool(id) : bool
-	+getInt(id) : int
+	+float modifier
 }
 
 class EntityLocation {
@@ -107,6 +101,22 @@ class EntityParameter {
 	+getCurrentParameter():float
 }
 
+
+class SpeciesTemplate {
+    +string speciesName
+    +float baseActionSpeed
+    +float baseBodySize
+    +float metabolismRate
+    +int maxAge
+    +DietType diet
+}
+
+class SpeciesLibrary {
+    +Dictionary speciesData
+    +getSpecies(id)
+}
+
+
 EntityManager --* Entity : stores
 EntityManager --> EntitiesGoalHandler : delegates
 EntityManager --> EntitiesTickHandler : delegates
@@ -119,10 +129,11 @@ Entity --* EntityLocation : connects
 Entity --* EntityGoal : connects
 Entity --* EntityParameter : connects
 EntityParameter -->  Entity : uses for calculations
+SpeciesLibrary --* SpeciesTemplate : contains
+Entity o-- SpeciesTemplate : references
 ```
 
-### Architectural Legend
-
+#### Architectural Legend
 #### 1. The Data Layer (The "What")
 * **Entity:** A unique ID that represents a creature. It is a "Passive Container"—it holds data but does not contain logic.
 * **EntityData/State (The "Pulse"):** The current dynamic values of the creature (Hunger, Thirst, Health, Position). These change every frame.
@@ -140,6 +151,90 @@ EntityParameter -->  Entity : uses for calculations
 #### 3. The Communication Layer (The "Who")
 * **InputManager:** Converts player clicks/keys into commands for the `EntityManager` (e.g., "Spawn Entity" or "Modify Genes").
 * **OutputManager:** Listens to the `EntityState` and tells the Game Engine what to draw on the screen (Animations, UI Bars, Particles).
+
+
+
+### Parameters
+#### Species Library (Static Data)
+These values never change during the game. All rabbits share these.
+- **SpeciesID:** (e.g., "Rabbit_01")
+- **Genes:** Genes shared by all of that species. 
+- **Max Age:** Total life expectancy in game ticks.
+* **BaseActionSpeed:** The "default" speed for this species.
+* **BaseBodySize:** How big this species typically gets.
+* **DietType:** (Enum: Herbivore, Carnivore, etc.)
+
+##### Entity Instance (Personal Data)
+- **EntityID**
+- **Genes:** Genes held by this specific Entity only.   
+- **Current Age (0.0 - 1.0)**
+    - `0 - newborn`, `1 - death of old age`, `0.2 - adulthood`, `0.5 - end of reproductive age`
+- **ActionSpeed (0.0 - 1.0)**
+	- *Closer to 0, the slower it is, closer to 1 the faster it is.*
+	- **Impact Logic:** Should be modified by Age (babies/elderly are slower) and Fatigue.
+	- **Formula Idea:** `BaseActionSpeed * (Age Curve) * (1.0 - Fatigue)`
+- **BodySize (1 - 10)**
+    - *The visible size of the creature.*
+    - **Growth Logic:** This shouldn't be a flat number. It should be TargetSize (Gene) * AgePercent.
+    - **Impact:** Larger size = higher food requirement? (Big engines need more fuel).
+- **Max HP (1 - 10)**
+    - Formula: `BodySize`
+- **Current HP**
+	 - *Damage is substracted from Current HP (avoiding healing by sleeping/fatigue lowering)*
+	 - *Recovery: passively by 0.1 per 10 ticks, 0.5 for completed feeding, 0.3 per 10 ticks when sleeping*
+- **Fear(0.0 to 1.0)**
+	- *0.0: tranquil*
+	- *0.5: scared, in smaller/skittish animals causes them to run*
+	- *0.9 to 1.0: terrified, even bigger animals will be taking actions to run/take actions in response to fear*
+	- *Recovery: 0.1 per tick, starts ticking down when not in danger*
+- **Fatigue(0.0 to 1.0)**
+	- *0.0: rested*
+	- *1.0: exhausted, passes out forced to fall asleep*
+- **Hunger (0.0 to 1.0)**
+	- *0.0: fully satiated*
+	- *1.0: starving, triggers hp loss 1 per 10 ticks*
+```mermaid
+classDiagram
+    class SpeciesLibrary {
+        +Dictionary speciesData
+        +getSpecies(id)
+    }
+
+    class SpeciesTemplate {
+        +string speciesName
+        +float baseActionSpeed
+        +float baseBodySize
+        +int maxAge
+        +DietType diet
+    }
+
+    class Entity {
+        +Guid entityID
+        +SpeciesTemplate species
+        +Gene[] genes
+        +float currentAge
+        +float currentHP
+        +StateParameters state
+    }
+
+    class StateParameters {
+        +float hunger
+        +float fatigue
+        +float fear
+    }
+
+    class EntityLocation {
+        +float x, y, z
+        +float temperature
+    }
+
+    SpeciesLibrary --* SpeciesTemplate : contains
+    Entity o-- SpeciesTemplate : references
+    Entity --* StateParameters : stores
+    Entity --* EntityLocation : at
+```
+
+
 
 ### (ForLater)Perception & Sensory systems
 To keep it simpler then messing with LOS or other BS, we will be using proximity-based detection. 
