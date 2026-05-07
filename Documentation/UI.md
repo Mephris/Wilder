@@ -18,6 +18,67 @@
 	- Remove installed genes
 	- Cancel edit
 - Currently selected event more info
+### What is not needed for prototype
+- Grouping, filtering, just show a list
+- Events just as a string
+- gene and preset list can be a expandable list
 ### First draft
 
-![[Drawing 2026-05-05 00.39.12.excalidraw]]
+![[UI draft 1]]
+
+
+```mermaid
+classDiagram
+
+class SelectedEntityView{
+	+List<int> geneIds
+	+Objects parameters
+}
+
+class GeneViewUI{
+	+List<GeneUI> shownGeneUIs
+	+Event<int> OnGeneUIAdd 
+}
+
+class GeneUI{
+	
+}
+
+class EntityPresetViewUI{
+	+List<EntityPresetUI> shownEntitiesUIs
+	+Event<int> OnEntitiesUIAdd
+}
+
+class EntityPresetUI{
+	
+}
+
+class TimeControlViewUI{
+	
+}
+
+class EntitiesViewUI{
+	
+}
+
+class EventViewUI{
+	+ShowNewEvent(string event)
+}
+
+SelectedEntityView --> GeneViewUI : References
+GeneViewUI --* GeneUI : Holds
+SelectedEntityView --> EntityPresetViewUI : References
+EntityPresetViewUI --* EntityPresetUI : Holds
+SelectedEntityView --> EventViewUI : References
+SelectedEntityView --> TimeControlViewUI : References
+SelectedEntityView --> EntitiesViewUI : References
+
+```
+
+### Time Control
+
+**Visual**
+![[UI time control draft]]
+
+**Code**
+- On each button pressed ->
