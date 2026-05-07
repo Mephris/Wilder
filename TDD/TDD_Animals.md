@@ -192,6 +192,8 @@ These values never change during the game. All rabbits share these.
 - **Hunger (0.0 to 1.0)**
 	- *0.0: fully satiated*
 	- *1.0: starving, triggers hp loss 1 per 10 ticks*
+
+
 ```mermaid
 classDiagram
     class SpeciesLibrary {
@@ -240,6 +242,43 @@ class EntityLocation {
     Entity --* EntityParameters : stores
     Entity --* EntityLocation : at
 ```
+### Genes
+
+#### Math behind Genes
+How Genes (DNA) modify the Utility (Decision Making), for full explanation check [[AI]].
+
+| Gene Type      | Math Operation                       | Game Feel                    |
+| :------------- | :----------------------------------- | :--------------------------- |
+| **Multiplier** | $GoalScore = Need \times k$          | **Importance** (Priority)    |
+| **Exponent**   | $GoalScore = Need^{k}$               | **Urgency** (Response Curve) |
+| **Offset**     | $GoalScore = Need + k$               | **Temperament** (Baseline)   |
+| **Threshold**  | $Need < k \rightarrow GoalScore = 0$ | **Tolerance** (Deadzones)    |
+| **Input Mod**  | $Rate = BaseRate \times k$           | **Physicality** (Metabolism) |
+
+##### Math Legend
+- **Need:** The raw value of a requirement (Hunger, Fear, etc.), from **0.0** (none) to **1.0** (critical).
+- **GoalScore:** The final "desire" to act. The animal picks the goal with the highest score.
+- **k:** The "Gene Strength" - the actual number saved in the DNA.
+- **BaseRate:** How fast a need naturally grows (e.g., standard hunger speed).
+- **Rate:** The new, modified speed after the gene is applied.
+
+#### Genes
+> [!note] The "Range" approach
+> There will be only a single "Fear Response" gene that will change its name based on the $k$ value. 
+> - If $k$ is between 1.5 and 3.0 $\rightarrow$ The UI displays the name "Brave".
+> - If $k$ is above 5.0 $\rightarrow$ The UI displays the name "Heroic".
+> - This is great for evolution because $k$ can slowly grow from 2.0 to 5.0 over generations.
+
+###### Fear Response
+
+| ID    | Fear Response | K for Exponent | Descriptive                                      |
+| ----- | ------------- | -------------- | ------------------------------------------------ |
+| FR_01 | Skitterish    | 0.5            | Panics at small threats, ($0.1 \rightarrow 0.3$) |
+| FR_02 | Default       | 1.0            | Linear response to danger                        |
+| FR_03 | Brave         | 2.0            | Ignores small threats, acts at mid-range         |
+| FR_04 | Heroic        | 5.0            | Only reacts when threat is touching them         |
+
+
 
 ### (ForLater)Perception & Sensory systems
 To keep it simpler then messing with LOS or other BS, we will be using proximity-based detection. 
