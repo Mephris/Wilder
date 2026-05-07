@@ -254,6 +254,9 @@ How Genes (DNA) modify the Utility (Decision Making), for full explanation check
 | **Offset**     | $GoalScore = Need + k$               | **Temperament** (Baseline)   |
 | **Threshold**  | $Need < k \rightarrow GoalScore = 0$ | **Tolerance** (Deadzones)    |
 | **Input Mod**  | $Rate = BaseRate \times k$           | **Physicality** (Metabolism) |
+> [!warning] Min $k$ value
+> NEVER GO BELOW $k = 0.3$
+> It will cause the behavior to constantly trigger even if there is no reason around the creature. 
 
 ##### Math Legend
 - **Need:** The raw value of a requirement (Hunger, Fear, etc.), from **0.0** (none) to **1.0** (critical).
