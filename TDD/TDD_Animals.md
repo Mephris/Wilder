@@ -266,13 +266,14 @@ How Genes (DNA) modify the Utility (Decision Making), for full explanation check
 - **Rate:** The new, modified speed after the gene is applied.
 
 #### Genes
-> [!note] The "Range" approach
+> [!note] The "Range"
 > There will be only a single "Fear Response" gene that will change its name based on the $k$ value. 
 > - If $k$ is between 1.5 and 3.0 $\rightarrow$ The UI displays the name "Brave".
 > - If $k$ is above 5.0 $\rightarrow$ The UI displays the name "Heroic".
 > - This is great for evolution because $k$ can slowly grow from 2.0 to 5.0 over generations.
 
 ###### Fear Response
+Response to perceived danger, the treshhold of which triggers the response mechanics like for example fleeting. 
 
 | ID    | Fear Response | K for Exponent | Descriptive                                      |
 | ----- | ------------- | -------------- | ------------------------------------------------ |
@@ -280,7 +281,37 @@ How Genes (DNA) modify the Utility (Decision Making), for full explanation check
 | FR_02 | Default       | 1.0            | Linear response to danger                        |
 | FR_03 | Brave         | 2.0            | Ignores small threats, acts at mid-range         |
 | FR_04 | Heroic        | 5.0            | Only reacts when threat is touching them         |
+###### Fatigue 
+How quickly will they want to search for a save place and sleep before exhaustion. 
 
+| ID    | Name      | K for Exponent | Descriptive                                                      |
+| :---- | :-------- | :------------- | :--------------------------------------------------------------- |
+| Fa_01 | Drowsy    | 0.5            | Wants to sleep very early; feels fatigue's "weight" immediately. |
+| Fa_02 | Default   | 1.0            | Linear response to fatigue.                                      |
+| Fa_03 | Sturdy    | 2.0            | Ignores mild tiredness; only seeks sleep when moderately tired.  |
+| Fa_04 | Insomniac | 5.0            | Stays active until the absolute last second before passing out.  |
+> [!warning] Sleep planning
+> It would be good to give some benefit for sleeping earlier, the idea being that having more time to perform sleep task will allow the animal to find a save place. 
+> 
+
+###### Hunger
+How quickly they get hungry. 
+
+| ID    | Name          | K for Exponent | Descriptive                                                       |
+| :---- | :------------ | :------------- | :---------------------------------------------------------------- |
+| Hu_01 | Gluttonous    | 0.5            | Desperately looks for food even when slightly peckish.            |
+| Hu_02 | Default       | 1.0            | Linear response; starts eating at mid-hunger.                     |
+| Hu_03 | Patient       | 2.0            | Ignores stomach growls; prefers doing other things until hungry.  |
+| Hu_04 | Ascetic       | 5.0            | Only eats when literally starving and losing HP.                  |
+
+###### Physical Traits
+These genes use the **Input Mod** ($k$) math. They modify the base stats of the species. 
+
+| ID    | Trait        | K (Multiplier) | Descriptive                                           |
+| :---- | :----------- | :------------- | :---------------------------------------------------- |
+| Si_01 | Body Size    | 0.5 to 2.0     | Multiplies Target Size. Affects Max HP and food cost. |
+| Sp_01 | Action Speed | 0.5 to 1.5     | Multiplies movement and action execution speed.       |
+| Li_01 | Longevity    | 0.8 to 2.0     | Multiplies the Max Age of the entity.                |
 
 
 ### (ForLater)Perception & Sensory systems
