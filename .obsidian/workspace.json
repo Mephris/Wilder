@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TDD/TDD.md",
+                "file": "TODO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TDD"
+              "title": "TODO"
             }
           }
         ]
@@ -194,6 +194,7 @@
   },
   "active": "a1f3c0405db78cd8",
   "lastOpenFiles": [
+    "TDD/TDD.md",
     "Excalidraw/UI time control draft.md",
     "Excalidraw/UI draft 1.md",
     "Documentation/UI.md",
@@ -201,7 +202,6 @@
     "Documentation/AI.md",
     "TODO.md",
     "Assets/Assets.md",
-    "TDD/TDD.md",
     "Documentation/The Created.md",
     "Documentation/GDD - Wilder.md",
     "Documentation",
