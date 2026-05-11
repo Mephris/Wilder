@@ -1,3 +1,4 @@
+
 ### General Loop
 From [[TDD_Animals]]
 
@@ -87,6 +88,7 @@ class EntityLocation {
 
 class EntityGoal {
 	+GoalType type : Enum
+	+float lastScore
 	+Object[] traits
 	
 	+getFloat(id) : float
@@ -137,21 +139,41 @@ Entity o-- SpeciesTemplate : references
 ### Architectural Legend
 #### 1. The Data Layer (The "What")
 * **Entity:** A unique ID that represents a creature. It is a "Passive Container"—it holds data but does not contain logic.
-* **EntityData/State (The "Pulse"):** The current dynamic values of the creature (Hunger, Thirst, Health, Position). These change every frame.
+* **EntityData/State (The "Pulse"):** The current dynamic values of the creature (Hunger, Health, Position). These change every frame.
 * **Genes (The "DNA"):** The permanent traits of the creature (Brave, Fast, Glutton). These act as **Math Modifiers** for everything else.
-* **Intent Holders (`currentGoal` & `entityBehaviour`):** The "bookmarks" that store what the animal decided to do and exactly which step of the process it is currently on.
+* **Intent Holders (`currentGoal` & `entityBehaviour`):** The "bookmarks" that store what the animal decided to do and exactly which step of the process it is currently on. 
+    * **lastScore:** Stored within the `currentGoal`, it remembers the "Value" of the current task to calculate **Decision Inertia**.
 
 #### 2. The Processing Layer (The "How")
 * **EntityManager (The "Registry"):** The central database. It knows where every entity is and provides the list of animals to the Handlers. 
 * **Handlers (The "Systems"):** Specialized workers that process all entities in batches.
-* **EntitiesTickHandler (The "Metabolism"):** Updates the `EntityState`. It increases hunger/thirst over time based on the Genes.
+* **EntitiesTickHandler (The "Metabolism"):** Updates the `EntityState`. It increases hunger over time based on the Genes.
 * **PerceptionSystem (The "Senses"):** The "Input" for the brain. It fills the entity's memory with nearby objects (Food, Water, Predators) using the "Smell" (Proximity) logic.
 * **EntitiesGoalHandler (The "Strategy"):** The **Utility Brain**. It looks at the `EntityState` and `Perception` to decide on a high-level **Goal** (e.g., "I want to Eat"). It writes this into `currentGoal`.
 * **EntitiesBehaviourHandler (The "Tactics"):** The **Behavior Tree**. It looks at the `currentGoal` and executes the physical steps (e.g., "Walk to X, play animation, reduce food HP").
 
-#### 3. The Communication Layer (The "Who")
+#### 3. Goal Inertia (The "Focus")
+To prevent "Goal Flickering" (rapidly switching between two similar needs), the brain uses a **10% Decision Inertia** rule:
+* A new goal is only selected if its score is **1.1x higher** than the score of the current goal.
+* **Exception:** If the current goal is `Idle` or the new goal is `Fear` (Panic), the switch is immediate.
+
+###### BT vs Utility Boundary
+Different types of goals/actions will have a different interruption thresholds. 
+* **Movement:** Always interruptible. The animal will change direction immediately if the Goal switches.
+* **Atomic Actions:** Physical actions like "Eating a bite" or "Laying down to sleep" are non-interruptible. The BT must finish the current leaf node before checking for a Goal switch.
+* **Emergency Cancel:** If the new Goal is `Fear`, it overrides "Atomic Actions" to ensure immediate survival response.
+
+#### 4. The Communication Layer (The "Who")
 * **InputManager:** Converts player clicks/keys into commands for the `EntityManager` (e.g., "Spawn Entity" or "Modify Genes").
 * **OutputManager:** Listens to the `EntityState` and tells the Game Engine what to draw on the screen (Animations, UI Bars, Particles).
+
+#### 5. Time Context - Tick
+The simulation is **Deterministic and Tick-based** to ensure consistency across different frame rates and support fast-forwarding.
+* **Tick Rate:** 1 Tick = 0.1s (10 ticks per second).
+* **Implementation:** Uses a **Logic Buffer** (Time Bucket). Real-time (`Time.Delta`) is added to a buffer; whenever the buffer exceeds 0.1s, one "Logic Tick" is processed.
+* **Scaling:** Since it uses `Time.Delta`, the simulation naturally pauses when the game is paused and speeds up when `TimeScale` is increased.
+> [!warning] Sandbox.Time
+> Using Sandbox.Time would work if we were not going to be trying to speed up simulation, additionally it would count the time based on the framerate, so each pc would get a different time passage unless we would lock the fps amount. 
 
 ### Parameters
 #### Species Library (Static Data)
@@ -336,6 +358,9 @@ class PerceptionData{
 ```
 ##### Utility Interaction
 [[AI#Utility Layer (The "Brain")|Utility]] uses this data to calculate weights 
+	*Examples:*
+	- If *visiblePredator* is not empty, set *FearWeight* to 1.0
+	- If *visibleFood* has 3 items, set *FoodAvailabilityScore* to 1.0 
 	*Examples:*
 	- If *visiblePredator* is not empty, set *FearWeight* to 1.0
 	- If *visibleFood* has 3 items, set *FoodAvailabilityScore* to 1.0

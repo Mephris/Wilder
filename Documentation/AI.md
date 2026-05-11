@@ -9,7 +9,6 @@ The instinct which choses the actions of creatures within the game, updated
 | Need    | Description                                                                    | Used in Actions |
 | ------- | ------------------------------------------------------------------------------ | --------------- |
 | Hunger  | How close is the creature to starvation?                                       |                 |
-| Thirst  | How close is the creature to dying of thirst?                                  |                 |
 | Fatigue | Stamina level of the creature, refreshes on sleep, used during other actions   |                 |
 | Social  | How much does the creature need to socialize.                                  |                 |
 | Fear    | Does creature feel threatened? usually connected to seeing stronger creatures. |                 |
