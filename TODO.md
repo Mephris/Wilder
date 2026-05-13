@@ -4,20 +4,20 @@
 
 
 #### 1. Foundation & Data Layer
-- [ ] **Implement `SpeciesTemplate` & `SpeciesLibrary`**: Define base stats (Max Age, Action Speed, Diet) for rabbits, etc.
-- [ ] **Enhance `Entity`**: 
+- [x] **Implement `SpeciesTemplate` & `SpeciesLibrary`**: Define base stats (Max Age, Action Speed, Diet) for rabbits, etc.
+- [x] **Enhance `Entity`**: 
     - Add `CurrentAge`, `CurrentHP`, and `Species` reference.
     - Expose `Genes` list and add logic to retrieve modifiers.
     - Add `CurrentGoal` and `CurrentBehavior` placeholders.
 - [ ] **Implement `EntityLocation` functions**: Add `MoveTo` and clamping for coordinates.
 
 #### 2. The "Pulse" (Tick System)
-- [ ] **Implement `EntityTickHandler`**:
+- [x] **Implement `EntityTickHandler`**:
     - Logic for Hunger increase over time.
     - Logic for Fatigue increase.
     - Passive HP recovery/starvation damage.
     - Age progression.
-- [ ] **Complete `EntityParameters`**: Implement logic for `GetCurrentHunger()` and add `Fatigue` and `Fear` properties.
+- [x] **Complete `EntityParameters`**: Implement logic for `GetCurrentHunger()` and add `Fatigue` and `Fear` properties.
 
 #### 3. The "Brain" (Utility & Behavior)
 - [ ] **Create `EntitiesGoalHandler` (The Utility Layer)**:
@@ -33,11 +33,15 @@
 - [ ] **Connect `OutputManager`**: Hook into `EntityManager` events to sync visual entities in the sandbox with the logic data.
 
 #### 5. Gene Math
-- [ ] **Implement Gene Modifiers**: Create a utility to apply $k$ values (Multiplier, Exponent, Offset) to raw parameters during Ticks and Utility decisions.
+- [x] **Implement Gene Modifiers**: Create a utility to apply $k$ values (Multiplier, Exponent, Offset) to raw parameters during Ticks and Utility decisions.
 
-### ❓ To Be Decided (Research & Design)
+### To Be Decided (Research & Design)
 - [ ] **Plants**: How are plants represented? (Entities, Tile data, or static objects?)
 - [x] **BT vs Utility Boundary**: Define "Inertia" logic to prevent goal flickering and identify who owns the BT state.
 - [ ] **Death Behavior**: When an animal reaches Max Age, does it leave a corpse? Can corpses be eaten by carnivores?
 - [x] **Time Context**: Should the simulation use wall-clock time (`Sandbox.Time`) or a deterministic `TickCount` for logic?
 - [ ] **Spatial System**: Design proximity query logic for a single biome (Optimization vs Simplicity).
+- [ ] **Spatial Coordinates**: Where should the spatial coordinates (X, Y or Vector3 Position) live? In `EntityLocation` or as a separate field in `Entity`? Should it use `Vector3` or a custom system?
+
+
+

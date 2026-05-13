@@ -176,6 +176,7 @@ The simulation is **Deterministic and Tick-based** to ensure consistency across 
 > Using Sandbox.Time would work if we were not going to be trying to speed up simulation, additionally it would count the time based on the framerate, so each pc would get a different time passage unless we would lock the fps amount. 
 
 ### Parameters
+
 #### Species Library (Static Data)
 These values never change during the game. All rabbits share these.
 - **SpeciesID:** (e.g., "Rabbit_01")
@@ -295,7 +296,7 @@ How Genes (DNA) modify the Utility (Decision Making), for full explanation check
 > - This is great for evolution because $k$ can slowly grow from 2.0 to 5.0 over generations.
 
 ###### Fear Response
-Response to perceived danger, the treshhold of which triggers the response mechanics like for example fleeting. 
+Response to perceived danger, the threshold of which triggers the response mechanics like for example fleeting. 
 
 | ID    | Fear Response | K for Exponent | Descriptive                                      |
 | ----- | ------------- | -------------- | ------------------------------------------------ |
@@ -364,3 +365,14 @@ class PerceptionData{
 	*Examples:*
 	- If *visiblePredator* is not empty, set *FearWeight* to 1.0
 	- If *visibleFood* has 3 items, set *FoodAvailabilityScore* to 1.0
+
+# Proposition
+
+###### Dietary Genes
+These genes act as the "Major DNA" that defines the core metabolic identity and behavior of the creature. They use the **Input Mod** math to modify base metabolic rates and inform the Utility Brain's decision logic.
+
+| ID    | Diet Type | K (Multiplier) | Descriptive                                                              |
+| :---- | :-------- | :------------- | :----------------------------------------------------------------------- |
+| Di_01 | Herbivore | 1.0            | Standard metabolic rate; prioritizes plant-based food sources.           |
+| Di_02 | Predator  | 0.7            | Slower hunger growth (efficient but high-cost hunt); targets other entities. |
+| Di_03 | Omnivore  | 1.2            | Faster hunger growth; can utilize any food source.                       |
