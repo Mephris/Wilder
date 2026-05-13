@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TDD/TDD.md",
+                "file": "Documentation/TDD/TDD.md",
                 "mode": "source",
                 "source": false
               },
@@ -192,18 +192,18 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "a1f3c0405db78cd8",
+  "active": "177ac833f0870eb3",
   "lastOpenFiles": [
-    "TDD/TDD_Animals.md",
-    "TODO.md",
-    "TDD/TDD.md",
-    "Excalidraw/UI time control draft.md",
-    "Excalidraw/UI draft 1.md",
+    "Documentation/TDD/TDD_Animals.md",
     "Documentation/UI.md",
-    "Documentation/AI.md",
-    "Assets/Assets.md",
     "Documentation/The Created.md",
     "Documentation/GDD - Wilder.md",
+    "Documentation/AI.md",
+    "Assets/Assets.md",
+    "TODO.md",
+    "Documentation/TDD/TDD.md",
+    "Excalidraw/UI time control draft.md",
+    "Excalidraw/UI draft 1.md",
     "Documentation",
     "TDD.md",
     "Temp.md",
@@ -212,7 +212,7 @@
     "conflict-files-obsidian-git.md",
     "ProjectFiles",
     "New folder",
-    "TDD",
+    "Documentation/TDD",
     "2. Game Overview & Vision.md",
     "01 - Project Info.md",
     "Short GDD/Alexs-Core-GDD-Template.docx.md",
