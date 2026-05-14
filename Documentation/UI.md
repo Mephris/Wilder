@@ -81,4 +81,11 @@ SelectedEntityView --> EntitiesViewUI : References
 ![[UI time control draft]]
 
 **Code**
-- On each button pressed ->
+- On each button pressed --> notify TimeManager
+
+### Event View
+
+**Visual**
+
+
+**Code**
